@@ -1,0 +1,61 @@
+{
+  "summarize": [{
+    "label": "Should summarize file : summarize.xml",
+    "arguments": {
+      "path": "./test/dataset/in/resources/summarize.xml",
+      "selectors": {
+        "title": "title",
+        "segments": ["abstract",
+          "introduction",
+          "methods_and_materials",
+          "results",
+          "discussion"
+        ]
+      },
+      "criteria": "frequency"
+    },
+    "result": {
+      "not": true,
+      "length": 0
+    }
+  },{
+    "label": "Should summarize file : summarize-2.xml",
+    "arguments": {
+      "path": "./test/dataset/in/resources/summarize-2.xml",
+      "selectors": {
+        "title": "title",
+        "segments": ["background",
+          "materials_and_methods",
+          "statistical_analyses",
+          "results",
+          "discussion",
+          "conclusion"
+        ]
+      },
+      "criteria": "frequency"
+    },
+    "result": {
+      "not": true,
+      "length": 0
+    }
+  }],
+  "index": [{
+    "label": "Should index file : SUCCESS.xml",
+    "arguments": {
+      "path": "./test/dataset/in/resources/SUCCESS.xml",
+      "selectors": {
+        "title": "title",
+        "segments": ["abstract",
+          "introduction",
+          "methods_and_materials",
+          "results",
+          "discussion"
+        ]
+      }
+    },
+    "result": {
+      "not": true,
+      "length": 0
+    }
+  }]
+}
